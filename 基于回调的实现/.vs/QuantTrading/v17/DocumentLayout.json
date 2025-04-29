@@ -1,0 +1,72 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2150E023-8B5A-4F3E-BD50-5A214D9B1B1A}|QuantTrading\\QuantTrading.vcxproj|D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\QuantTrading\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2150E023-8B5A-4F3E-BD50-5A214D9B1B1A}|QuantTrading\\QuantTrading.vcxproj|solutionrelative:QuantTrading\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2150E023-8B5A-4F3E-BD50-5A214D9B1B1A}|QuantTrading\\QuantTrading.vcxproj|D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\QuantTrading\\src\\DataFeed.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2150E023-8B5A-4F3E-BD50-5A214D9B1B1A}|QuantTrading\\QuantTrading.vcxproj|solutionrelative:QuantTrading\\src\\DataFeed.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2150E023-8B5A-4F3E-BD50-5A214D9B1B1A}|QuantTrading\\QuantTrading.vcxproj|D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\QuantTrading\\include\\DataFeed.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2150E023-8B5A-4F3E-BD50-5A214D9B1B1A}|QuantTrading\\QuantTrading.vcxproj|solutionrelative:QuantTrading\\include\\DataFeed.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DataFeed.h",
+              "DocumentMoniker": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\QuantTrading\\include\\DataFeed.h",
+              "RelativeDocumentMoniker": "QuantTrading\\include\\DataFeed.h",
+              "ToolTip": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\QuantTrading\\include\\DataFeed.h",
+              "RelativeToolTip": "QuantTrading\\include\\DataFeed.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-29T11:07:56.128Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\QuantTrading\\src\\main.cpp",
+              "RelativeDocumentMoniker": "QuantTrading\\src\\main.cpp",
+              "ToolTip": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\QuantTrading\\src\\main.cpp",
+              "RelativeToolTip": "QuantTrading\\src\\main.cpp",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-29T11:08:55.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DataFeed.cpp",
+              "DocumentMoniker": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\QuantTrading\\src\\DataFeed.cpp",
+              "RelativeDocumentMoniker": "QuantTrading\\src\\DataFeed.cpp",
+              "ToolTip": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\QuantTrading\\src\\DataFeed.cpp",
+              "RelativeToolTip": "QuantTrading\\src\\DataFeed.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-29T11:05:16.413Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
