@@ -1,17 +1,12 @@
 #pragma once
-
 #include <memory>
+#include "../Events/Event.h"
 
-class Event;
-
+// 事件处理器基类
 class EventHandler {
 public:
-    explicit EventHandler(const std::string& name) : handlerName(name) {}
     virtual ~EventHandler() = default;
     
     // 处理事件
     virtual void handleEvent(const std::shared_ptr<Event>& event) = 0;
-    
-private:
-    std::string handlerName;
 };

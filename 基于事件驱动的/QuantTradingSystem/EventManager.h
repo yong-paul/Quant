@@ -2,8 +2,9 @@
 
 #include <vector>
 #include <memory>
-#include "EventHandler.h"
-#include "Event.h"
+#include "Handlers/EventHandler.h"
+#include "Events/Event.h"
+#include <mutex>
 
 class EventManager {
 public:

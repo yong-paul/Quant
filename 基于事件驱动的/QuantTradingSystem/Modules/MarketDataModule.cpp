@@ -1,6 +1,6 @@
 #include "MarketDataModule.h"
 #include "EventManager.h"
-#include "MarketDataEvent.h"
+#include "Events/MarketDataEvent.h"
 
 void MarketDataModule::onNewMarketData(const std::string& symbol, double price, int volume) {
     // 创建行情数据事件

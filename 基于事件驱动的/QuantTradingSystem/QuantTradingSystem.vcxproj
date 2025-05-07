@@ -10,6 +10,30 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EventManager.h" />
+    <ClInclude Include="Events\Event.h" />
+    <ClInclude Include="Events\MarketDataEvent.h" />
+    <ClInclude Include="Events\OrderEvent.h" />
+    <ClInclude Include="Events\TradeEvent.h" />
+    <ClInclude Include="Handlers\EventHandler.h" />
+    <ClInclude Include="Handlers\RiskManagerHandler.h" />
+    <ClInclude Include="Handlers\StrategyEngineHandler.h" />
+    <ClInclude Include="MarketDataAPi\CTPMarketDataFeed.h" />
+    <ClInclude Include="MarketDataAPi\ThostFtdcMdApi.h" />
+    <ClInclude Include="MarketDataAPi\ThostFtdcTraderApi.h" />
+    <ClInclude Include="MarketDataAPi\ThostFtdcUserApiDataType.h" />
+    <ClInclude Include="MarketDataAPi\ThostFtdcUserApiStruct.h" />
+    <ClInclude Include="Modules\DataFeed.h" />
+    <ClInclude Include="Modules\DataProcessor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="EventManager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MarketDataAPi\CTPMarketDataFeed.cpp" />
+    <ClCompile Include="Modules\DataFeed.cpp" />
+    <ClCompile Include="Modules\DataProcessor.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -40,6 +64,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <IncludePath>$(IncludePath);$(ProjectDir)Events;$(ProjectDir)Handlers;$(ProjectDir)Modules;$(ProjectDir)</IncludePath>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
@@ -76,13 +103,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="EventManager.h" />
-    <ClInclude Include="EventHandler.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
 </Project>

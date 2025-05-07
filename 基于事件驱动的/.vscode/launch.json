@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/DeskTop/大模型应用项目/AI量化/基于事件驱动的/QuantTradingSystem",
-      "program": "d:/DeskTop/大模型应用项目/AI量化/基于事件驱动的/QuantTradingSystem/build/Debug/outDebug",
+      "cwd": "d:/DeskTop/大模型应用项目/AI量化/Quant/基于事件驱动的/QuantTradingSystem",
+      "program": "d:/DeskTop/大模型应用项目/AI量化/Quant/基于事件驱动的/QuantTradingSystem/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
