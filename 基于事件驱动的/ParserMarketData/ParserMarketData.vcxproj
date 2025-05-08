@@ -20,6 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CTPQuoteDataApi.h" />
+    <ClInclude Include="include\CTP\ThostFtdcMdApi.h" />
+    <ClInclude Include="include\CTP\ThostFtdcTraderApi.h" />
+    <ClInclude Include="include\CTP\ThostFtdcUserApiDataType.h" />
+    <ClInclude Include="include\CTP\ThostFtdcUserApiStruct.h" />
     <ClInclude Include="IQuoteDataApi.h" />
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +107,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -110,6 +115,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>thostmduserapi_se.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)include/CTP;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

@@ -4,11 +4,26 @@
     <Filter Include="CTP">
       <UniqueIdentifier>{36954830-1f79-4dc1-9e02-00ce78e53824}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CTP\include">
+      <UniqueIdentifier>{0faff413-44fa-41d0-a68e-07baa7e00ab5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IQuoteDataApi.h" />
     <ClInclude Include="CTPQuoteDataApi.h">
       <Filter>CTP</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CTP\ThostFtdcMdApi.h">
+      <Filter>CTP\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CTP\ThostFtdcTraderApi.h">
+      <Filter>CTP\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CTP\ThostFtdcUserApiDataType.h">
+      <Filter>CTP\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CTP\ThostFtdcUserApiStruct.h">
+      <Filter>CTP\include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

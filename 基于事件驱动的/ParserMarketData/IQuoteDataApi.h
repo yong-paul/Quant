@@ -13,31 +13,31 @@ public:
 	 *	@config	模块配置
 	 *	返回值	是否初始化成功
 	 */
-	virtual bool init(const std::string config) { return false; }
+	virtual bool Init(const std::string config) { return false; }
 
 	/*
 	 *	释放解析模块
 	 *	用于退出时
 	 */
-	virtual void release() {}
+	virtual void Release() {}
 
 	/*
 	 *	开始连接服务器
 	 *	@返回值	连接命令是否发送成功
 	 */
-	virtual bool connect() { return false; }
+	virtual bool Connect() { return false; }
 
 	/*
 	 *	断开连接
 	 *	@返回值	命令是否发送成功
 	 */
-	virtual bool disconnect() { return false; }
+	virtual bool Disconnect() { return false; }
 
 	/*
 	 *	是否已连接
 	 *	@返回值	是否已连接
 	 */
-	virtual bool isConnected() { return false; }
+	virtual bool IsConnected() { return false; }
 
 	///*
 	// *	订阅合约列表
