@@ -1,0 +1,8 @@
+{
+    "FrontAddress": "tcp://180.168.146.187:10131",
+    "BrokerId": "9999",
+    "UserId": "123456",
+    "Password": "password",
+    "LogDirectory": "logs/md",
+    "FlowDirectory": "flow/md"
+} 

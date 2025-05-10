@@ -1,0 +1,271 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcUserApiDataType.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|solutionrelative:QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcUserApiDataType.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcUserApiStruct.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|solutionrelative:QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcUserApiStruct.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcTraderApi.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|solutionrelative:QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcTraderApi.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcMdApi.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|solutionrelative:QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcMdApi.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Utils\\config\\ConfigManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|solutionrelative:QuantTradingSystem\\Utils\\config\\ConfigManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Trade\\TradeService.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|solutionrelative:QuantTradingSystem\\Trade\\TradeService.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\EventManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|solutionrelative:QuantTradingSystem\\EventManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|solutionrelative:QuantTradingSystem\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Trade\\CTPTradeFeed.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|solutionrelative:QuantTradingSystem\\Trade\\CTPTradeFeed.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\MarketData\\CTPMarketDataFeed.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|solutionrelative:QuantTradingSystem\\MarketData\\CTPMarketDataFeed.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Trade\\CTPTradeFeed.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|solutionrelative:QuantTradingSystem\\Trade\\CTPTradeFeed.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Events\\OrderEvent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|solutionrelative:QuantTradingSystem\\Events\\OrderEvent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Trade\\TradeDataStruct.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|solutionrelative:QuantTradingSystem\\Trade\\TradeDataStruct.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Handlers\\SignalHandler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57E13E5C-2ACC-4C85-A829-51F7963ACDB7}|QuantTradingSystem\\QuantTradingSystem.vcxproj|solutionrelative:QuantTradingSystem\\Handlers\\SignalHandler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Utils\\logger\\spdlog\\logger.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:QuantTradingSystem\\Utils\\logger\\spdlog\\logger.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ThostFtdcUserApiStruct.h",
+              "DocumentMoniker": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcUserApiStruct.h",
+              "RelativeDocumentMoniker": "QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcUserApiStruct.h",
+              "ToolTip": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcUserApiStruct.h",
+              "RelativeToolTip": "QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcUserApiStruct.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-10T04:21:02.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ThostFtdcUserApiDataType.h",
+              "DocumentMoniker": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcUserApiDataType.h",
+              "RelativeDocumentMoniker": "QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcUserApiDataType.h",
+              "ToolTip": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcUserApiDataType.h",
+              "RelativeToolTip": "QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcUserApiDataType.h",
+              "ViewState": "AgIAAO0BAAAAAAAAAAAiwAICAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-10T04:21:01.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ThostFtdcTraderApi.h",
+              "DocumentMoniker": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcTraderApi.h",
+              "RelativeDocumentMoniker": "QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcTraderApi.h",
+              "ToolTip": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcTraderApi.h",
+              "RelativeToolTip": "QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcTraderApi.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-10T04:21:00.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ThostFtdcMdApi.h",
+              "DocumentMoniker": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcMdApi.h",
+              "RelativeDocumentMoniker": "QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcMdApi.h",
+              "ToolTip": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcMdApi.h",
+              "RelativeToolTip": "QuantTradingSystem\\MarketData\\API\\CTP\\ThostFtdcMdApi.h",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-10T04:16:58.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ConfigManager.cpp",
+              "DocumentMoniker": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Utils\\config\\ConfigManager.cpp",
+              "RelativeDocumentMoniker": "QuantTradingSystem\\Utils\\config\\ConfigManager.cpp",
+              "ToolTip": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Utils\\config\\ConfigManager.cpp",
+              "RelativeToolTip": "QuantTradingSystem\\Utils\\config\\ConfigManager.cpp",
+              "ViewState": "AgIAACsAAAAAAAAAAAAiwDIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-10T04:12:10.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EventManager.cpp",
+              "DocumentMoniker": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\EventManager.cpp",
+              "RelativeDocumentMoniker": "QuantTradingSystem\\EventManager.cpp",
+              "ToolTip": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\EventManager.cpp",
+              "RelativeToolTip": "QuantTradingSystem\\EventManager.cpp",
+              "ViewState": "AgIAALcAAAAAAAAAAADgv8YAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-10T04:09:59.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CTPMarketDataFeed.cpp",
+              "DocumentMoniker": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\MarketData\\CTPMarketDataFeed.cpp",
+              "RelativeDocumentMoniker": "QuantTradingSystem\\MarketData\\CTPMarketDataFeed.cpp",
+              "ToolTip": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\MarketData\\CTPMarketDataFeed.cpp",
+              "RelativeToolTip": "QuantTradingSystem\\MarketData\\CTPMarketDataFeed.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-10T04:05:21.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "logger.h",
+              "DocumentMoniker": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Utils\\logger\\spdlog\\logger.h",
+              "RelativeDocumentMoniker": "QuantTradingSystem\\Utils\\logger\\spdlog\\logger.h",
+              "ToolTip": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Utils\\logger\\spdlog\\logger.h",
+              "RelativeToolTip": "QuantTradingSystem\\Utils\\logger\\spdlog\\logger.h",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-09T17:45:03.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CTPTradeFeed.cpp",
+              "DocumentMoniker": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Trade\\CTPTradeFeed.cpp",
+              "RelativeDocumentMoniker": "QuantTradingSystem\\Trade\\CTPTradeFeed.cpp",
+              "ToolTip": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Trade\\CTPTradeFeed.cpp",
+              "RelativeToolTip": "QuantTradingSystem\\Trade\\CTPTradeFeed.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-09T17:41:31.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OrderEvent.h",
+              "DocumentMoniker": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Events\\OrderEvent.h",
+              "RelativeDocumentMoniker": "QuantTradingSystem\\Events\\OrderEvent.h",
+              "ToolTip": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Events\\OrderEvent.h",
+              "RelativeToolTip": "QuantTradingSystem\\Events\\OrderEvent.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-09T17:38:29.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TradeDataStruct.h",
+              "DocumentMoniker": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Trade\\TradeDataStruct.h",
+              "RelativeDocumentMoniker": "QuantTradingSystem\\Trade\\TradeDataStruct.h",
+              "ToolTip": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Trade\\TradeDataStruct.h",
+              "RelativeToolTip": "QuantTradingSystem\\Trade\\TradeDataStruct.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-09T17:37:44.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TradeService.cpp",
+              "DocumentMoniker": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Trade\\TradeService.cpp",
+              "RelativeDocumentMoniker": "QuantTradingSystem\\Trade\\TradeService.cpp",
+              "ToolTip": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Trade\\TradeService.cpp",
+              "RelativeToolTip": "QuantTradingSystem\\Trade\\TradeService.cpp",
+              "ViewState": "AgIAALoAAAAAAAAAAAAiwMUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-09T17:35:51.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SignalHandler.h",
+              "DocumentMoniker": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Handlers\\SignalHandler.h",
+              "RelativeDocumentMoniker": "QuantTradingSystem\\Handlers\\SignalHandler.h",
+              "ToolTip": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Handlers\\SignalHandler.h",
+              "RelativeToolTip": "QuantTradingSystem\\Handlers\\SignalHandler.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-09T17:34:59.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CTPTradeFeed.h",
+              "DocumentMoniker": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Trade\\CTPTradeFeed.h",
+              "RelativeDocumentMoniker": "QuantTradingSystem\\Trade\\CTPTradeFeed.h",
+              "ToolTip": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\Trade\\CTPTradeFeed.h",
+              "RelativeToolTip": "QuantTradingSystem\\Trade\\CTPTradeFeed.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-09T17:34:50.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\main.cpp",
+              "RelativeDocumentMoniker": "QuantTradingSystem\\main.cpp",
+              "ToolTip": "D:\\DeskTop\\\u5927\u6A21\u578B\u5E94\u7528\u9879\u76EE\\AI\u91CF\u5316\\Quant\\\u57FA\u4E8E\u4E8B\u4EF6\u9A71\u52A8\u7684\\QuantTradingSystem\\QuantTradingSystem\\main.cpp",
+              "RelativeToolTip": "QuantTradingSystem\\main.cpp",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAG8AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-09T17:34:38.627Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

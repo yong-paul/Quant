@@ -1,0 +1,10 @@
+{
+    "FrontAddress": "tcp://180.168.146.187:10130",
+    "BrokerId": "9999",
+    "UserId": "123456",
+    "Password": "password",
+    "AppId": "simnow_client_test",
+    "AuthCode": "0000000000000000",
+    "LogDirectory": "logs/td",
+    "FlowDirectory": "flow/td"
+} 

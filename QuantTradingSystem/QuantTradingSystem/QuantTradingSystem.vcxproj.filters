@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Events">
+      <UniqueIdentifier>{d3bfdeea-53b0-4882-9831-d705883c06f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Handlers">
+      <UniqueIdentifier>{7776541e-d46e-41f0-8467-c482fe1da3ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MarketData">
+      <UniqueIdentifier>{7e32122d-c366-4dfa-99e3-5c229d1dfedb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MarketData\API">
+      <UniqueIdentifier>{10be6bdb-77be-477e-abde-efb10ad247da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MarketData\API\CTP">
+      <UniqueIdentifier>{4fd3c685-6587-41e4-889d-519a71f316b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Strategies">
+      <UniqueIdentifier>{968a3c62-8ecf-4e4c-89e7-66db940293bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Trade">
+      <UniqueIdentifier>{9f00c093-8dc9-4fb8-8ab3-065a1f9b97d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config">
+      <UniqueIdentifier>{a192c746-2aab-41be-a2e6-2a1c871f2e7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{159c02ff-e83b-446c-ae45-4880fec2bdc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\cache">
+      <UniqueIdentifier>{0e48f8bd-41d7-469a-9991-0998f01d2944}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\config">
+      <UniqueIdentifier>{29cac142-2cfc-4a9a-ad72-fc3b0f8cb3f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\datetime">
+      <UniqueIdentifier>{29f07ed5-a1c2-4e6b-a8f6-715f180b3f7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\jsonparser">
+      <UniqueIdentifier>{10201fa0-15c9-4b30-ab12-5ed39e189c91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\logger">
+      <UniqueIdentifier>{245e9b15-e078-47c4-8a07-69732ad7cbc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\math">
+      <UniqueIdentifier>{3c9faf45-6916-4861-9d8e-b33cdaa6ab89}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Events\AccountEvent.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\AllEvents.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\Event.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\MarketDataEvent.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\OrderEvent.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\PositionEvent.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\RiskEvent.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\StrategySignalEvent.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\SystemEvent.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\TradeEvent.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Handlers\EventHandler.h">
+      <Filter>Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="Handlers\MarketDataHandler.h">
+      <Filter>Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="Handlers\RiskHandler.h">
+      <Filter>Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="Handlers\SignalHandler.h">
+      <Filter>Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="Handlers\StrategyHandler.h">
+      <Filter>Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="MarketData\CTPMarketDataFeed.h">
+      <Filter>MarketData</Filter>
+    </ClInclude>
+    <ClInclude Include="MarketData\IMarketDataFeed.h">
+      <Filter>MarketData</Filter>
+    </ClInclude>
+    <ClInclude Include="MarketData\MarketDataField.h">
+      <Filter>MarketData</Filter>
+    </ClInclude>
+    <ClInclude Include="MarketData\MarketDataService.h">
+      <Filter>MarketData</Filter>
+    </ClInclude>
+    <ClInclude Include="MarketData\API\CTP\ThostFtdcMdApi.h">
+      <Filter>MarketData\API\CTP</Filter>
+    </ClInclude>
+    <ClInclude Include="MarketData\API\CTP\ThostFtdcTraderApi.h">
+      <Filter>MarketData\API\CTP</Filter>
+    </ClInclude>
+    <ClInclude Include="MarketData\API\CTP\ThostFtdcUserApiDataType.h">
+      <Filter>MarketData\API\CTP</Filter>
+    </ClInclude>
+    <ClInclude Include="MarketData\API\CTP\ThostFtdcUserApiStruct.h">
+      <Filter>MarketData\API\CTP</Filter>
+    </ClInclude>
+    <ClInclude Include="Strategies\MovingAverageStrategy.h">
+      <Filter>Strategies</Filter>
+    </ClInclude>
+    <ClInclude Include="EventManager.h" />
+    <ClInclude Include="Trade\CTPTradeFeed.h">
+      <Filter>Trade</Filter>
+    </ClInclude>
+    <ClInclude Include="Trade\ITradeFeed.h">
+      <Filter>Trade</Filter>
+    </ClInclude>
+    <ClInclude Include="Trade\TradeDataStruct.h">
+      <Filter>Trade</Filter>
+    </ClInclude>
+    <ClInclude Include="Trade\TradeService.h">
+      <Filter>Trade</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\config\ConfigManager.h">
+      <Filter>Utils\config</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MarketData\CTPMarketDataFeed.cpp">
+      <Filter>MarketData</Filter>
+    </ClCompile>
+    <ClCompile Include="MarketData\MarketDataFeedFactory.cpp">
+      <Filter>MarketData</Filter>
+    </ClCompile>
+    <ClCompile Include="MarketData\MarketDataService.cpp">
+      <Filter>MarketData</Filter>
+    </ClCompile>
+    <ClCompile Include="EventManager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Trade\CTPTradeFeed.cpp">
+      <Filter>Trade</Filter>
+    </ClCompile>
+    <ClCompile Include="Trade\TradeFeedFactory.cpp">
+      <Filter>Trade</Filter>
+    </ClCompile>
+    <ClCompile Include="Trade\TradeService.cpp">
+      <Filter>Trade</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\config\ConfigManager.cpp">
+      <Filter>Utils\config</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config\ctp_md.json">
+      <Filter>config</Filter>
+    </None>
+    <None Include="config\ctp_td.json">
+      <Filter>config</Filter>
+    </None>
+  </ItemGroup>
+</Project>
