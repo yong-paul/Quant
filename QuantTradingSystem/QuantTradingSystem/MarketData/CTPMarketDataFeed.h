@@ -17,7 +17,7 @@
 #define SAFE_STRNCPY(dest, destsize, src, count) strncpy(dest, src, count)
 #endif
 
-using MarketDataCallback = std::function<void(const MarketDataField&)>;
+//using MarketDataCallback = std::function<void(const MarketDataField&)>;
 
 class CTPMarketDataFeed : public IMarketDataFeed, public CThostFtdcMdSpi {
 public:

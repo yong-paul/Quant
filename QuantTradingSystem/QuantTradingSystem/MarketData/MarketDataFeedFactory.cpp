@@ -1,4 +1,4 @@
-#include "IMarketDataFeed.h"
+﻿#include "IMarketDataFeed.h"
 #include "CTPMarketDataFeed.h"
 #include <stdexcept>
 
@@ -10,6 +10,10 @@ std::shared_ptr<IMarketDataFeed> MarketDataFeedFactory::createMarketDataFeed(con
     // else if (provider == "XTP") {
     //     return std::make_shared<XTPMarketDataFeed>();
     // }
+    else
+    {
+        return nullptr;
+    }
     
     throw std::runtime_error("Unsupported market data provider: " + provider);
 } 
