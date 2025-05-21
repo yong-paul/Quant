@@ -92,6 +92,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)MarketData;$(ProjectDir)Events;$(ProjectDir)Handlers;$(ProjectDir)Strategies;$(ProjectDir)Trade;$(ProjectDir)Utils;$(ProjectDir)Utils\logger;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -108,7 +109,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)MarketData;$(ProjectDir)Events;$(ProjectDir)Handlers;$(ProjectDir)Strategies;$(ProjectDir)Trade;$(ProjectDir)Utils;$(ProjectDir)Utils\logger;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)MarketData;$(ProjectDir)Events;$(ProjectDir)Handlers;$(ProjectDir)Strategies;$(ProjectDir)Trade;$(ProjectDir)Utils;$(ProjectDir)Utils\logger;$(WindowsSdkDir)Include\$(WindowsTargetPlatformVersion)\ucrt;$(WindowsSdkDir)Include\$(WindowsTargetPlatformVersion)\um;$(WindowsSdkDir)Include\$(WindowsTargetPlatformVersion)\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -162,6 +165,7 @@
     <ClInclude Include="Trade\TradeDataStruct.h" />
     <ClInclude Include="Trade\TradeService.h" />
     <ClInclude Include="Utils\config\ConfigManager.h" />
+    <ClInclude Include="Utils\logger\AsyncLogger.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EventManager.cpp" />
@@ -173,6 +177,7 @@
     <ClCompile Include="Trade\TradeFeedFactory.cpp" />
     <ClCompile Include="Trade\TradeService.cpp" />
     <ClCompile Include="Utils\config\ConfigManager.cpp" />
+    <ClCompile Include="Utils\logger\AsyncLogger.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="config\ctp_md.json" />

@@ -136,6 +136,9 @@
     <ClInclude Include="Utils\config\ConfigManager.h">
       <Filter>Utils\config</Filter>
     </ClInclude>
+    <ClInclude Include="Utils\logger\AsyncLogger.h">
+      <Filter>Utils\logger</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MarketData\CTPMarketDataFeed.cpp">
@@ -160,6 +163,9 @@
     </ClCompile>
     <ClCompile Include="Utils\config\ConfigManager.cpp">
       <Filter>Utils\config</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\logger\AsyncLogger.cpp">
+      <Filter>Utils\logger</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
