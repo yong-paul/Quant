@@ -3,8 +3,8 @@
 #include <chrono>
 #include <iomanip>
 #include <sstream>
+#include <filesystem>
 #include <windows.h>
-#include <ctime>
 
 namespace QuantTrading {
 
@@ -32,9 +32,7 @@ void AsyncLogger::init(const std::string& logDir,
     maxFiles_ = maxFiles;
 
     // 创建日志目录
-    if (!createDirectory(logDir_)) {
-        throw std::runtime_error("Failed to create log directory: " + logDir_);
-    }
+    std::filesystem::create_directories(logDir_);
 
     // 生成初始日志文件名
     currentLogFile_ = logDir_ + "/" + logPrefix_ + "_" + getCurrentTimestamp() + ".log";
@@ -139,45 +137,22 @@ std::string AsyncLogger::getCurrentTimestamp() {
     return ss.str();
 }
 
-bool AsyncLogger::createDirectory(const std::string& path) {
-    return _mkdir(path.c_str()) == 0 || errno == EEXIST;
-}
-
-std::vector<std::string> AsyncLogger::getDirectoryFiles(const std::string& path, const std::string& extension) {
-    std::vector<std::string> files;
-    std::string searchPath = path + "/*" + extension;
-    
-    WIN32_FIND_DATA findData;
-    HANDLE hFind = FindFirstFile(searchPath.c_str(), &findData);
-    
-    if (hFind != INVALID_HANDLE_VALUE) {
-        do {
-            if (!(findData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)) {
-                files.push_back(path + "/" + findData.cFileName);
-            }
-        } while (FindNextFile(hFind, &findData));
-        FindClose(hFind);
-    }
-    
-    return files;
-}
-
-bool AsyncLogger::deleteFile(const std::string& path) {
-    return DeleteFileA(path.c_str()) != 0;
-}
-
 void AsyncLogger::checkAndRotateLogFile() {
     if (currentFileSize_ >= maxFileSize_) {
         // 关闭当前日志文件
         logFile_.close();
 
-        // 获取所有日志文件
-        auto logFiles = getDirectoryFiles(logDir_, ".log");
-        
-        // 如果超过最大文件数，删除最旧的
+        // 删除最旧的日志文件（如果超过最大文件数）
+        std::vector<std::string> logFiles;
+        for (const auto& entry : std::filesystem::directory_iterator(logDir_)) {
+            if (entry.path().extension() == ".log") {
+                logFiles.push_back(entry.path().string());
+            }
+        }
+
         if (logFiles.size() >= maxFiles_) {
             std::sort(logFiles.begin(), logFiles.end());
-            deleteFile(logFiles.front());
+            std::filesystem::remove(logFiles.front());
         }
 
         // 创建新的日志文件

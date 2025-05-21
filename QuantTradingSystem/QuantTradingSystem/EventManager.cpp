@@ -27,7 +27,6 @@ void EventManager::start() {
 #ifdef _WIN32
         ctime_s(timeStr, sizeof(timeStr), &now_time_t);
 #else
-        // 在非Windows系统上使用线程安全的ctime_r
         ctime_r(&now_time_t, timeStr);
 #endif
         startupData.eventTime = timeStr;
@@ -45,9 +44,9 @@ void EventManager::stop() {
         }
         
         // 清空事件队列
-        std::lock_guard<std::mutex> lock(eventMutex_);
-        while (!eventQueue_.empty()) {
-            eventQueue_.pop();
+        std::shared_ptr<Event> event;
+        while (eventQueue_.pop(event)) {
+            // 清空队列
         }
     }
 }
@@ -91,17 +90,15 @@ void EventManager::unregisterHandler(std::shared_ptr<EventHandler> handler) {
 }
 
 void EventManager::processEvents() {
-    std::vector<std::shared_ptr<Event>> currentEvents;
+    std::shared_ptr<Event> event;
+    eventBuffer_.clear();
     
-    {
-        std::lock_guard<std::mutex> lock(eventMutex_);
-        while (!eventQueue_.empty()) {
-            currentEvents.push_back(eventQueue_.front());
-            eventQueue_.pop();
-        }
+    // 批量获取事件
+    while (eventBuffer_.size() < MAX_BUFFER_SIZE && eventQueue_.pop(event)) {
+        eventBuffer_.push_back(event);
     }
     
-    for (auto& event : currentEvents) {
+    for (auto& event : eventBuffer_) {
         // 检查是否有针对该事件类型的处理器
         EventType type = event->getType();
         
@@ -139,9 +136,10 @@ void EventManager::processEvents() {
 void EventManager::addEvent(std::shared_ptr<Event> event) {
     if (!event) return;
     
-    {
-        std::lock_guard<std::mutex> lock(eventMutex_);
-        eventQueue_.push(event);
+    // 使用无锁队列的push操作
+    while (!eventQueue_.push(event)) {
+        // 如果队列满，等待一小段时间后重试
+        std::this_thread::yield();
     }
     
     eventCondition_.notify_one();
@@ -175,12 +173,10 @@ void EventManager::unregisterHandlerForType(EventType type, std::shared_ptr<Even
 }
 
 bool EventManager::isEventQueueEmpty() const {
-    std::lock_guard<std::mutex> lock(eventMutex_);
     return eventQueue_.empty();
 }
 
 size_t EventManager::getEventQueueSize() const {
-    std::lock_guard<std::mutex> lock(eventMutex_);
     return eventQueue_.size();
 }
 

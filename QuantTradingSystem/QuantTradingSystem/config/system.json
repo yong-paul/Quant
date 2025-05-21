@@ -1,0 +1,50 @@
+{
+    "system": {
+        "name": "QuantTradingSystem",
+        "version": "1.0.0",
+        "log_level": "INFO",
+        "log_dir": "logs",
+        "max_log_files": 5,
+        "max_log_size": 10485760
+    },
+    "market_data": {
+        "provider": "CTP",
+        "host": "180.168.146.187",
+        "port": 17001,
+        "user_id": "your_user_id",
+        "password": "your_password",
+        "broker_id": "9999",
+        "instruments": [
+            "IF2306",
+            "IH2306",
+            "IC2306"
+        ]
+    },
+    "trading": {
+        "max_positions": 10,
+        "max_order_size": 100,
+        "risk_limit": {
+            "max_drawdown": 0.1,
+            "max_daily_loss": 100000,
+            "max_position_value": 1000000
+        },
+        "commission": {
+            "open": 0.0003,
+            "close": 0.0003,
+            "min_commission": 5
+        }
+    },
+    "strategies": {
+        "moving_average": {
+            "enabled": true,
+            "short_window": 5,
+            "long_window": 20,
+            "symbols": ["IF2306", "IH2306"],
+            "parameters": {
+                "stop_loss": 0.02,
+                "take_profit": 0.05,
+                "trailing_stop": 0.01
+            }
+        }
+    }
+} 

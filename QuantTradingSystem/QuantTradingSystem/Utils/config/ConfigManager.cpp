@@ -1,116 +1,157 @@
 ﻿#include "ConfigManager.h"
 #include <fstream>
-#include <vector>
-#include <string>
+#include <filesystem>
+#include <algorithm>
 #include <sstream>
-//#include "../logger/Logger.h"
 
-namespace {
-    std::vector<std::string> split(const std::string& s, char delimiter) {
-        std::vector<std::string> tokens;
-        std::string token;
-        std::istringstream tokenStream(s);
-        while (std::getline(tokenStream, token, delimiter)) {
-            tokens.push_back(token);
+namespace QuantTrading {
+
+ConfigManager::ConfigManager() {
+}
+
+ConfigManager::~ConfigManager() {
+}
+
+bool ConfigManager::init(const std::string& configDir) {
+    std::lock_guard<std::mutex> lock(mutex_);
+    configDir_ = configDir;
+    
+    // 创建配置目录（如果不存在）
+    if (!std::filesystem::exists(configDir_)) {
+        try {
+            std::filesystem::create_directories(configDir_);
+        } catch (const std::exception&) {
+            return false;
         }
-        return tokens;
     }
+    
+    return true;
 }
 
-ConfigManager& ConfigManager::getInstance() {
-    static ConfigManager instance;
-    return instance;
-}
-
-bool ConfigManager::loadConfig(const std::string& configPath) {
+bool ConfigManager::loadConfig(const std::string& configFile) {
+    std::lock_guard<std::mutex> lock(mutex_);
+    std::string fullPath = configDir_ + "/" + configFile;
+    
     try {
-        std::ifstream file(configPath);
+        std::ifstream file(fullPath);
         if (!file.is_open()) {
-            //Logger::error("ConfigManager", "Failed to open config file: {}", configPath);
             return false;
         }
         
-        config_ = nlohmann::json::parse(file);
-        currentConfigPath_ = configPath;
+        nlohmann::json newConfig;
+        file >> newConfig;
+        
+        // 合并新配置
+        configData_.merge_patch(newConfig);
         return true;
-    } catch (const std::exception& e) {
-        //Logger::error("ConfigManager", "Failed to parse config file: {} - {}", configPath, e.what());
+    } catch (const std::exception&) {
         return false;
     }
 }
 
-template<typename T>
-T ConfigManager::getValue(const std::string& key, const T& defaultValue) const {
+bool ConfigManager::reloadConfig(const std::string& configFile) {
+    std::lock_guard<std::mutex> lock(mutex_);
+    std::string fullPath = configDir_ + "/" + configFile;
+    
     try {
-        auto paths = split(key, '.');
-        auto current = config_;
-        
-        for (const auto& path : paths) {
-            if (current.contains(path)) {
-                current = current[path];
-            } else {
-                return defaultValue;
-            }
-        }
-        
-        return current.get<T>();
-    } catch (const std::exception& e) {
-        //Logger::error("ConfigManager", "Failed to get config value for key: {} - {}", key, e.what());
-        return defaultValue;
-    }
-}
-
-template<typename T>
-void ConfigManager::setValue(const std::string& key, const T& value) {
-    try {
-        auto paths = split(key, '.');
-        auto& current = config_;
-        
-        for (size_t i = 0; i < paths.size() - 1; ++i) {
-            if (!current.contains(paths[i])) {
-                current[paths[i]] = nlohmann::json::object();
-            }
-            current = current[paths[i]];
-        }
-        
-        current[paths.back()] = value;
-    } catch (const std::exception& e) {
-        //Logger::error("ConfigManager", "Failed to set config value for key: {} - {}", key, e.what());
-    }
-}
-
-bool ConfigManager::saveConfig(const std::string& configPath) {
-    try {
-        std::string savePath = configPath.empty() ? currentConfigPath_ : configPath;
-        std::ofstream file(savePath);
+        std::ifstream file(fullPath);
         if (!file.is_open()) {
-            //Logger::error("ConfigManager", "Failed to open config file for writing: {}", savePath);
             return false;
         }
         
-        file << std::setw(4) << config_;
+        nlohmann::json newConfig;
+        file >> newConfig;
+        
+        // 更新配置并通知变更
+        for (const auto& [key, value] : newConfig.items()) {
+            if (configData_[key] != value) {
+                configData_[key] = value;
+                notifyConfigChanged(key, value);
+            }
+        }
+        
         return true;
-    } catch (const std::exception& e) {
-        //Logger::error("ConfigManager", "Failed to save config: {}", e.what());
+    } catch (const std::exception&) {
         return false;
     }
 }
 
-bool ConfigManager::reloadConfig() {
-    if (currentConfigPath_.empty()) {
-        //Logger::error("ConfigManager", "No config file has been loaded yet");
-        return false;
-    }
-    return loadConfig(currentConfigPath_);
+void ConfigManager::registerListener(const std::string& key, 
+                                   std::shared_ptr<IConfigListener> listener) {
+    std::lock_guard<std::mutex> lock(mutex_);
+    listeners_[key].push_back(listener);
 }
 
-// 显式实例化常用类型
-template int ConfigManager::getValue<int>(const std::string&, const int&) const;
-template double ConfigManager::getValue<double>(const std::string&, const double&) const;
-template std::string ConfigManager::getValue<std::string>(const std::string&, const std::string&) const;
-template bool ConfigManager::getValue<bool>(const std::string&, const bool&) const;
+void ConfigManager::unregisterListener(const std::string& key, 
+                                     std::shared_ptr<IConfigListener> listener) {
+    std::lock_guard<std::mutex> lock(mutex_);
+    auto it = listeners_.find(key);
+    if (it != listeners_.end()) {
+        auto& listeners = it->second;
+        listeners.erase(
+            std::remove(listeners.begin(), listeners.end(), listener),
+            listeners.end()
+        );
+    }
+}
 
-template void ConfigManager::setValue<int>(const std::string&, const int&);
-template void ConfigManager::setValue<double>(const std::string&, const double&);
-template void ConfigManager::setValue<std::string>(const std::string&, const std::string&);
-template void ConfigManager::setValue<bool>(const std::string&, const bool&);
+bool ConfigManager::saveConfig(const std::string& configFile) {
+    std::lock_guard<std::mutex> lock(mutex_);
+    std::string fullPath = configDir_ + "/" + configFile;
+    
+    try {
+        std::ofstream file(fullPath);
+        if (!file.is_open()) {
+            return false;
+        }
+        
+        file << std::setw(4) << configData_;
+        return true;
+    } catch (const std::exception&) {
+        return false;
+    }
+}
+
+nlohmann::json ConfigManager::getAllConfig() const {
+    std::lock_guard<std::mutex> lock(mutex_);
+    return configData_;
+}
+
+bool ConfigManager::hasConfig(const std::string& key) const {
+    std::lock_guard<std::mutex> lock(mutex_);
+    auto keys = parseConfigKey(key);
+    nlohmann::json current = configData_;
+    
+    for (const auto& k : keys) {
+        if (!current.contains(k)) {
+            return false;
+        }
+        current = current[k];
+    }
+    
+    return true;
+}
+
+void ConfigManager::notifyConfigChanged(const std::string& key, 
+                                      const nlohmann::json& newValue) {
+    auto it = listeners_.find(key);
+    if (it != listeners_.end()) {
+        for (const auto& listener : it->second) {
+            listener->onConfigChanged(key, newValue);
+        }
+    }
+}
+
+std::vector<std::string> ConfigManager::parseConfigKey(const std::string& key) const {
+    std::vector<std::string> result;
+    std::stringstream ss(key);
+    std::string item;
+    
+    while (std::getline(ss, item, '.')) {
+        result.push_back(item);
+    }
+    
+    return result;
+}
+
+} // namespace QuantTrading

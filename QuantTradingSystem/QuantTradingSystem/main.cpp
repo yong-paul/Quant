@@ -14,6 +14,7 @@
 #include "Handlers/SignalHandler.h"
 #include "Strategies/MovingAverageStrategy.h"
 #include "Utils/logger/AsyncLogger.h"
+#include "Utils/config/ConfigManager.h"
 
 // 全局变量用于信号处理
 std::atomic<bool> g_running(true);
@@ -24,19 +25,50 @@ void signalHandler(int signal) {
     g_running = false;
 }
 
+// 配置变更监听器示例
+class SystemConfigListener : public IConfigListener {
+public:
+    void onConfigChanged(const std::string& key, const nlohmann::json& newValue) override {
+        LOG_INFO("配置已更新: {} = {}", key, newValue.dump());
+    }
+};
+
 int main() {
     try {
-        // 初始化日志系统
-        QuantTrading::AsyncLogger::getInstance().init(
-            "logs",                    // 日志目录
-            "quant_trading",           // 日志文件前缀
-            QuantTrading::LogLevel::DEBUG,  // 最小日志级别
-            10 * 1024 * 1024,         // 单个日志文件最大大小（10MB）
-            5                         // 最大日志文件数
-        );
+        // 初始化配置管理器
+        auto& configManager = ConfigManager::getInstance();
+        if (!configManager.init("config")) {
+            std::cerr << "初始化配置管理器失败" << std::endl;
+            return 1;
+        }
 
-        LOG_INFO("Quant Trading System Initializing...");
-        
+        // 加载系统配置
+        if (!configManager.loadConfig("system.json")) {
+            std::cerr << "加载系统配置失败" << std::endl;
+            return 1;
+        }
+
+        // 注册配置监听器
+        auto systemListener = std::make_shared<SystemConfigListener>();
+        configManager.registerListener("system", systemListener);
+
+        // 初始化日志系统
+        std::string logDir = configManager.getValue<std::string>("system.log_dir", "logs");
+        std::string logLevel = configManager.getValue<std::string>("system.log_level", "INFO");
+        size_t maxLogFiles = configManager.getValue<size_t>("system.max_log_files", 5);
+        size_t maxLogSize = configManager.getValue<size_t>("system.max_log_size", 10 * 1024 * 1024);
+
+        AsyncLogger::getInstance().init(logDir, "system", 
+            logLevel == "DEBUG" ? LogLevel::DEBUG :
+            logLevel == "INFO" ? LogLevel::INFO :
+            logLevel == "WARNING" ? LogLevel::WARNING :
+            logLevel == "ERROR" ? LogLevel::ERROR :
+            LogLevel::FATAL,
+            maxLogSize, maxLogFiles);
+
+        LOG_INFO("量化交易系统启动");
+        LOG_INFO("系统版本: {}", configManager.getValue<std::string>("system.version", "unknown"));
+
         // 设置信号处理
         std::signal(SIGINT, signalHandler);
         std::signal(SIGTERM, signalHandler);
@@ -48,18 +80,12 @@ int main() {
         
         // 初始化行情数据服务
         auto marketDataService = std::make_shared<MarketDataService>(eventManager);
-        if (!marketDataService->init("CTP", "config/ctp_md.json")) {
-            LOG_ERROR("Failed to initialize market data service");
-            return 1;
-        }
+        marketDataService->init(configManager.getValue<std::string>("market_data.provider", "CTP"));
         LOG_INFO("Market Data Service initialized");
         
         // 初始化交易服务
         auto tradingService = std::make_shared<TradeService>(eventManager);
-        if (!tradingService->Init("CTP", "config/ctp_td.json")) {
-            LOG_ERROR("Failed to initialize trading service");
-            return 1;
-        }
+        tradingService->init(configManager.getValue<std::string>("market_data.provider", "CTP"));
         LOG_INFO("Trading Service initialized");
         
         // 创建行情数据缓存处理器
@@ -84,19 +110,20 @@ int main() {
         eventManager->registerHandlerForType(EventType::STRATEGY_SIGNAL, signalHandler);
         LOG_INFO("Signal Handler registered");
         
-        // 创建移动平均线策略实例
-        auto maStrategy = std::make_shared<MovingAverageStrategy>("MA_01");
-        auto maParam = std::make_shared<MAStrategyParam>();
-        maParam->symbol = "rb2405";
-        maParam->shortPeriod = 5;
-        maParam->longPeriod = 20;
-        maParam->volume = 1;
-        maStrategy->init(maParam);
-        LOG_INFO("Moving Average Strategy initialized");
-        
-        // 注册策略
-        strategyManager->registerStrategy(maStrategy);
-        LOG_INFO("Strategy registered with manager");
+        // 初始化策略
+        if (configManager.getValue<bool>("strategies.moving_average.enabled", false)) {
+            auto maStrategy = std::make_shared<MovingAverageStrategy>();
+            maStrategy->init(
+                configManager.getValue<int>("strategies.moving_average.short_window", 5),
+                configManager.getValue<int>("strategies.moving_average.long_window", 20),
+                configManager.getValue<std::vector<std::string>>("strategies.moving_average.symbols", {})
+            );
+            LOG_INFO("Moving Average Strategy initialized");
+            
+            // 注册策略
+            strategyManager->registerStrategy(maStrategy);
+            LOG_INFO("Strategy registered with manager");
+        }
         
         // 启动服务
         if (!marketDataService->start()) {
@@ -153,7 +180,7 @@ int main() {
         LOG_INFO("Event Manager stopped");
         
         // 停止日志系统
-        QuantTrading::AsyncLogger::getInstance().stop();
+        AsyncLogger::getInstance().stop();
         
         LOG_INFO("Quant Trading System Shutdown Complete");
         

@@ -3,7 +3,6 @@
 #include <vector>
 #include <unordered_map>
 #include <memory>
-#include <queue>
 #include <mutex>
 #include <condition_variable>
 #include <atomic>
@@ -11,6 +10,7 @@
 #include <functional>
 #include "Handlers/EventHandler.h"
 #include "Events/AllEvents.h"
+#include "Utils/LockFreeQueue.h"
 
 class EventManager {
 public:
@@ -54,8 +54,8 @@ private:
     // 按事件类型分类的处理器
     std::unordered_map<EventType, std::vector<std::shared_ptr<EventHandler>>> typeHandlers_;
     
-    // 事件队列
-    std::queue<std::shared_ptr<Event>> eventQueue_;
+    // 使用无锁队列
+    Utils::LockFreeQueue<std::shared_ptr<Event>, 10000> eventQueue_;
     
     // 互斥锁和条件变量，用于同步事件处理
     mutable std::mutex eventMutex_;
@@ -69,4 +69,8 @@ private:
     
     // 事件处理线程函数
     void eventProcessingThread();
+    
+    // 临时事件缓冲区，用于批量处理事件
+    std::vector<std::shared_ptr<Event>> eventBuffer_;
+    static const size_t MAX_BUFFER_SIZE = 1000;
 };
